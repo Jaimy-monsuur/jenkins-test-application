@@ -12,6 +12,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
+        sh 'curl https://cli-assets.heroku.com/install.sh | sh'
         sh 'docker build -t jaimymonsuur/java-web-app:latest .'
       }
     }
