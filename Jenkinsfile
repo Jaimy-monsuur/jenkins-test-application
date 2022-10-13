@@ -10,7 +10,7 @@ pipeline {
     string(name: 'APP_NAME', defaultValue: '', description: 'What is the Heroku app name?')
   }
   stages {
-    stage('Build') {
+    stage('Get heroku') {
       steps {
         sh 'curl https://cli-assets.heroku.com/install.sh | sh'
       }
