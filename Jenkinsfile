@@ -12,7 +12,7 @@ pipeline {
   stages {
     stage('Get heroku') {
       steps {
-        sh 'curl https://cli-assets.heroku.com/install.sh | sh'
+        sh 'sudo curl https://cli-assets.heroku.com/install.sh | sh'
       }
     }
     stage('Build') {
