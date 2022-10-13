@@ -10,11 +10,6 @@ pipeline {
     string(name: 'APP_NAME', defaultValue: '', description: 'What is the Heroku app name?')
   }
   stages {
-    stage('Get heroku') {
-      steps {
-        sh 'sudo curl https://cli-assets.heroku.com/install.sh | sh'
-      }
-    }
     stage('Build') {
       steps {
         sh 'docker build -t jaimymonsuur/java-web-app:latest .'
