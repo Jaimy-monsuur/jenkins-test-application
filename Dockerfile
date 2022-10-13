@@ -7,7 +7,6 @@ COPY pom.xml .
 COPY src src
 
 RUN chmod +x mvnw
-RUN curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
 RUN ./mvnw install -DskipTests
 RUN mkdir -p target/dependency && (cd target/dependency; jar -xf ../*.jar)
 
